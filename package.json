@@ -1,7 +1,7 @@
 {
   "name": "youtube",
   "version": "1.0.0",
-  "description": "",
+  "description": "parse own youtube data",
   "main": "test.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "file-system": "^2.2.2",
-    "lodash": "^4.17.11"
+    "lodash": "^4.17.11",
+    "request": "^2.88.0"
   }
 }
