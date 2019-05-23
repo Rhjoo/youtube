@@ -1,4 +1,5 @@
 // Borrowed this from https://codepen.io/kucerajacob/pen/6b6a347c7d24edee15b3491420db4ecd?editors=0010
+// ISO 8601 date format
 
 const convertTime = (duration) => {
   let a = duration.match(/\d+/g);
@@ -30,7 +31,7 @@ const convertTime = (duration) => {
   const h = Math.floor(duration / 3600);
   const m = Math.floor(duration % 3600 / 60);
   const s = Math.floor(duration % 3600 % 60);
-  console.log((h > 0 ? h + ":" + (m < 10 ? "0" : "") : "") + m + ":" + (s < 10 ? "0" : "") + s);
+  return ((h > 0 ? h + ":" + (m < 10 ? "0" : "") : "") + m + ":" + (s < 10 ? "0" : "") + s);
 };
 
 module.exports = convertTime;
