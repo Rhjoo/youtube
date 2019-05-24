@@ -4,6 +4,7 @@ const convertTime = require('./convertTime');
 
 const baseUrl = 'https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=';
 const data = require('./sample10.json');
+let videosWithError = 0;
 
 data.forEach(function(video) {
   const titleUrl = video.titleUrl;
@@ -19,6 +20,7 @@ data.forEach(function(video) {
       console.log(convertTime(duration));
     })
     .catch(function (err) {
-      console.log(err);
+      videosWithError = videosWithError + 1;
+      console.log(err.statusCode, videosWithError);
     })
 });
